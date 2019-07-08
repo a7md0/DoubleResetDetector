@@ -4,7 +4,7 @@
 	PURPOSE: 	Trigger configure mode by resetting ESP8266 twice.
 	LICENCE:	MIT
  */
-
+#ifndef ARDUINO_ARCH_ESP32
 #include "DoubleResetDetector.h"
 
 // Flag which will be stored in RTC memory.
@@ -56,3 +56,4 @@ void DoubleResetDetector::clearRecentlyResetFlag() {
 	ESP.rtcUserMemoryWrite(address, &doubleResetDetectorFlag, sizeof(doubleResetDetectorFlag));
 }
 // EOF
+#endif
