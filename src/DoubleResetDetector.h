@@ -5,6 +5,7 @@
 	LICENCE:	MIT
  */
 
+#ifndef ARDUINO_ARCH_ESP32
 #ifndef DoubleResetDetector_H__
 #define DoubleResetDetector_H__
 
@@ -37,3 +38,4 @@ private:
 	uint32_t doubleResetDetectorFlag;
 };
 #endif // DoubleResetDetector_H__
+#endif // ARDUINO_ARCH_ESP32
